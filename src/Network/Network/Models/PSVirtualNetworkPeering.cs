@@ -72,6 +72,12 @@ namespace Microsoft.Azure.Commands.Network.Models
         [Ps1Xml(Target = ViewControl.Table)]
         public string ProvisioningState { get; set; }
 
+        [JsonProperty(Order = 1)]
+        public string[] RemoteSubnetNames { get; set; }
+
+        [JsonProperty(Order = 1)]
+        public string[] LocalSubnetNames { get; set; }
+
         [JsonIgnore]
         public string RemoteVirtualNetworkText
         {
